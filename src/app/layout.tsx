@@ -1,4 +1,4 @@
-import Link from 'next/link'
+
 import './globals.css'
 
 export const metadata = {
@@ -10,7 +10,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <main>{children}</main>
+        <main>
+          {children}
+          <audio
+            src="/audio/lagu.mp3"
+            autoPlay
+            loop
+            controls={false}
+            style={{ display: "none" }}
+          />
+        </main>
       </body>
     </html>
   )
