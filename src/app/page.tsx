@@ -2,19 +2,15 @@
 
 import Link from 'next/link'
 import PageWrapper from '@/components/PageWrapper'
-import BackgroundMusic from '@/components/BackgroundMusic'
 import { motion } from 'framer-motion'
-import Blossom from '@/components/Blossom'
 
 export default function HomePage() {
   return (
     <PageWrapper>
-      <BackgroundMusic src="/music/jpop.mp3" />
-      <Blossom />
       <main className="text-center p-4 min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-100 via-pink-50 to-rose-100">
         <motion.h1
           className="text-5xl md:text-6xl font-extrabold text-pink-600 drop-shadow-lg"
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -90 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
@@ -37,7 +33,7 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 1.4, ease: 'easeInOut' }}
         >
           <Link
-            href="/surprise"
+            href="/secret"
             className="inline-block px-8 py-3 bg-pink-500 text-white text-lg rounded-full shadow-lg hover:bg-pink-600 transition-transform hover:scale-105"
           >
             🎁 Lihat Kejutan 🎁
