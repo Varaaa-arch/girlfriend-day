@@ -4,7 +4,11 @@ import './globals.css'
 export const metadata = {
   title: 'National GF Day',
   description: 'Surprise for my girl 💖',
+  icons: {
+    icon: "/favicon.ico", 
+  },
 }
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
