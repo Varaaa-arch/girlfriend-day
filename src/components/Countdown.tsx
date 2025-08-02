@@ -20,7 +20,7 @@ function getElapsedTime(startDate: Date): TimeElapsed {
   return { days, hours, minutes, seconds }
 }
 
-  const startDate = new Date('2024-08-08T00:00:00') 
+const startDate = new Date('2024-08-08T00:00:00')
 
 export default function Countdown() {
   const [elapsed, setElapsed] = useState<TimeElapsed>(getElapsedTime(startDate))
@@ -41,30 +41,30 @@ export default function Countdown() {
 
   return (
     <div className="text-center mb-4">
-        <p className="text-2xl font-bold text-pink-700 mb-1">
-            {years} YEARS {months} MONTHS
-        </p>
-        <div className="text-5xl font-bold text-pink-600 flex justify-center gap-6">
-          <div className="flex flex-col items-center">
-            <span>{elapsed.days}</span>
-            <span className="text-base font-normal text-pink-500">Days</span>
-          </div>
-          <span>:</span>
-          <div className="flex flex-col items-center">
-            <span>{elapsed.hours}</span>
-            <span className="text-base font-normal text-pink-500">Hours</span>
-          </div>
-          <span>:</span>
-          <div className="flex flex-col items-center">
-            <span>{elapsed.minutes}</span>
-            <span className="text-base font-normal text-pink-500">Minutes</span>
-          </div>
-          <span>:</span>
-          <div className="flex flex-col items-center">
-            <span>{elapsed.seconds}</span>
-            <span className="text-base font-normal text-pink-500">Seconds</span>
-          </div>
+      <p className="text-xl sm:text-2xl font-bold text-pink-700 mb-2">
+        {years} YEARS {months} MONTHS
+      </p>
+      <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-pink-600 flex flex-wrap justify-center gap-4 sm:gap-6">
+        <div className="flex flex-col items-center min-w-[60px]">
+          <span>{elapsed.days}</span>
+          <span className="text-xs sm:text-sm font-normal text-pink-500">Days</span>
         </div>
+        <span className="hidden sm:inline">:</span>
+        <div className="flex flex-col items-center min-w-[60px]">
+          <span>{elapsed.hours}</span>
+          <span className="text-xs sm:text-sm font-normal text-pink-500">Hours</span>
+        </div>
+        <span className="hidden sm:inline">:</span>
+        <div className="flex flex-col items-center min-w-[60px]">
+          <span>{elapsed.minutes}</span>
+          <span className="text-xs sm:text-sm font-normal text-pink-500">Minutes</span>
+        </div>
+        <span className="hidden sm:inline">:</span>
+        <div className="flex flex-col items-center min-w-[60px]">
+          <span>{elapsed.seconds}</span>
+          <span className="text-xs sm:text-sm font-normal text-pink-500">Seconds</span>
+        </div>
+      </div>
     </div>
   )
 }
